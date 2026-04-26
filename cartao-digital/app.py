@@ -4,7 +4,7 @@ import os
 
 st.set_page_config(layout="centered", page_title="João Silva - Pedreiro")
 
-# Caminho absoluto da pasta onde está o app.py
+# Caminho absoluto da pasta do app
 CURRENT_DIR = os.path.dirname(__file__)
 
 def get_image_base64(image_name):
@@ -35,14 +35,17 @@ header, #MainMenu, footer {visibility: hidden !important;}
 }
 
 .float-card {
-    background: transparent !important;
+    background: transparent!important;
     backdrop-filter: blur(24px) !important;
+   
+    padding: 0 32px 36px 32px !important;
    
     position: relative !important;
     margin: 120px auto 0 auto !important;
     text-align: center !important;
 }
 
+/* WRAPPER DA FOTO */
 .avatar-wrapper {
     position: relative !important;
     width: 100% !important;
@@ -57,22 +60,25 @@ header, #MainMenu, footer {visibility: hidden !important;}
     z-index: 10 !important;
 }
 
+/* ANEL COM GRADIENTE */
 .avatar-ring {
-    padding: 8px !important;
-    background: white !important;
+    padding: 6px !important;
+    background: linear-gradient(135deg, #10b981 0%, #14b8a6 50%, #0ea5e9 100%) !important;
     border-radius: 50% !important;
     display: inline-block !important;
-    box-shadow: 0 25px 70px rgba(0,0,0,0.3) !important;
+    box-shadow: 0 25px 70px rgba(16, 185, 129, 0.4) !important;
 }
 
+/* FOTO COM BORDA BRANCA INTERNA */
 .avatar-img {
     width: 170px !important;
     height: 170px !important;
     border-radius: 50% !important;
-    border: 7px solid white !important;
+    border: 5px solid white !important;
     object-fit: cover !important;
     display: block !important;
     margin: 0 auto !important;
+    background: white !important;
 }
 
 .content-start {
@@ -252,7 +258,7 @@ header, #MainMenu, footer {visibility: hidden !important;}
 
 st.markdown('<div class="float-card">', unsafe_allow_html=True)
 
-# WRAPPER DA FOTO COM CAMINHO CORRETO
+# FOTO COM ANEL GRADIENTE
 st.markdown('<div class="avatar-wrapper">', unsafe_allow_html=True)
 if img_base64:
     st.markdown(f'''
@@ -263,7 +269,7 @@ if img_base64:
     </div>
     ''', unsafe_allow_html=True)
 else:
-    st.markdown('<div class="avatar-float"><div style="width:170px;height:170px;background:#e2e8f0;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#64748b;font-size:14px;font-weight:600;">Sem foto</div></div>', unsafe_allow_html=True)
+    st.markdown('<div class="avatar-float"><div style="width:170px;height:170px;background:linear-gradient(135deg,#10b981,#14b8a6);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:14px;font-weight:600;">Sem foto</div></div>', unsafe_allow_html=True)
 st.markdown('</div>', unsafe_allow_html=True)
 
 # CONTEÚDO
