@@ -112,7 +112,7 @@ st.markdown('<div class="float-card">', unsafe_allow_html=True)
 
 # Foto flutuante
 st.markdown('<div class="avatar-wrap">', unsafe_allow_html=True)
-st.image("foto_pedreiro.jpg", use_container_width=False, width=120, output_format="JPEG")
+st.image("pedreiro.jpg", use_container_width=False, width=120, output_format="JPEG")
 st.markdown('</div>', unsafe_allow_html=True)
 
 # Nome e cargo
