@@ -87,11 +87,13 @@ header, #MainMenu, footer {visibility: hidden !important;}
 
 .name {
     text-align: center !important;
-    color: #0f172a !important;
+   color: #0f172a !important;
     font-weight: 800 !important;
     font-size: 36px !important;
     margin: 0 0 12px 0 !important;
     letter-spacing: -1.5px !important;
+            width:100% !important;
+            display:block !important;
 }
 
 .tag {
@@ -300,7 +302,7 @@ st.markdown('''
 st.markdown('<div class="btn-premium-stack">', unsafe_allow_html=True)
 
 st.markdown('''
-<a href="https://wa.me/47997125274?text=Olá%20João,%20vi%20seu%20cartão%20digital%20e%20quero%20um%20orçamento" target="_blank" class="btn-premium">
+<a href="https://wa.me/47999999?text=Olá%20João,%20vi%20seu%20cartão%20digital%20e%20quero%20um%20orçamento" target="_blank" class="btn-premium">
     <div class="btn-premium-content">
         <span class="btn-premium-icon">💬</span>
         <span class="btn-premium-text">Falar no WhatsApp</span>
