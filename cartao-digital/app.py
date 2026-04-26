@@ -4,7 +4,11 @@ import os
 
 st.set_page_config(layout="centered", page_title="João Silva - Pedreiro")
 
-def get_image_base64(image_path):
+# Caminho absoluto da pasta onde está o app.py
+CURRENT_DIR = os.path.dirname(__file__)
+
+def get_image_base64(image_name):
+    image_path = os.path.join(CURRENT_DIR, image_name)
     if os.path.exists(image_path):
         with open(image_path, "rb") as img_file:
             return base64.b64encode(img_file.read()).decode()
@@ -17,7 +21,6 @@ st.markdown("""
 <style>
 header, #MainMenu, footer {visibility: hidden !important;}
 
-/* ZERA TUDO DO STREAMLIT */
 .stApp {
     background: linear-gradient(135deg, #064e3b 0%, #0f766e 30%, #1f2937 100%) !important;
     min-height: 100vh !important;
@@ -35,23 +38,20 @@ header, #MainMenu, footer {visibility: hidden !important;}
     background: transparent !important;
     backdrop-filter: blur(24px) !important;
    
-    padding: 0 32px 36px 32px !important; /* Padding 0 no topo */
-   
     position: relative !important;
-    margin: 120px auto 0 auto !important; /* Espaço pra foto de 170px não cortar */
+    margin: 120px auto 0 auto !important;
     text-align: center !important;
 }
 
-/* WRAPPER DA FOTO - NÃO USA POSITION ABSOLUTE */
 .avatar-wrapper {
     position: relative !important;
     width: 100% !important;
-    height: 0 !important; /* Altura 0 pra não empurrar o conteúdo */
+    height: 0 !important;
 }
 
 .avatar-float {
     position: absolute !important;
-    top: -85px !important; /* Metade da altura da foto */
+    top: -85px !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     z-index: 10 !important;
@@ -75,9 +75,8 @@ header, #MainMenu, footer {visibility: hidden !important;}
     margin: 0 auto !important;
 }
 
-/* CONTEÚDO COM PADDING SUPERIOR GARANTIDO */
 .content-start {
-    padding-top: 80px !important; /* 170px foto - 85px + 35px de respiro */
+    padding-top: 80px !important;
 }
 
 .name {
@@ -85,7 +84,7 @@ header, #MainMenu, footer {visibility: hidden !important;}
     color: #0f172a !important;
     font-weight: 800 !important;
     font-size: 36px !important;
-    margin: 0 0 12px 0 !important; /* Margem 0 no topo */
+    margin: 0 0 12px 0 !important;
     letter-spacing: -1.5px !important;
 }
 
@@ -99,7 +98,6 @@ header, #MainMenu, footer {visibility: hidden !important;}
     margin: 0 0 40px 0 !important;
 }
 
-/* STATS SEM DIVISOR */
 .stats-container {
     display: flex !important;
     justify-content: center !important;
@@ -134,7 +132,6 @@ header, #MainMenu, footer {visibility: hidden !important;}
     text-transform: uppercase !important; 
 }
 
-/* BOTÕES PREMIUM */
 .btn-premium-stack {
     display: flex !important;
     flex-direction: column !important;
@@ -194,7 +191,6 @@ header, #MainMenu, footer {visibility: hidden !important;}
     transform: translateX(4px) !important;
 }
 
-/* QR SECTION TRANSPARENTE */
 .qr-section {
     background: transparent !important;
     border-radius: 0 !important;
@@ -256,7 +252,7 @@ header, #MainMenu, footer {visibility: hidden !important;}
 
 st.markdown('<div class="float-card">', unsafe_allow_html=True)
 
-# WRAPPER DA FOTO COM ALTURA 0
+# WRAPPER DA FOTO COM CAMINHO CORRETO
 st.markdown('<div class="avatar-wrapper">', unsafe_allow_html=True)
 if img_base64:
     st.markdown(f'''
@@ -270,13 +266,13 @@ else:
     st.markdown('<div class="avatar-float"><div style="width:170px;height:170px;background:#e2e8f0;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#64748b;font-size:14px;font-weight:600;">Sem foto</div></div>', unsafe_allow_html=True)
 st.markdown('</div>', unsafe_allow_html=True)
 
-# CONTEÚDO COM PADDING SUPERIOR FIXO
+# CONTEÚDO
 st.markdown('<div class="content-start">', unsafe_allow_html=True)
 
 st.markdown('<h1 class="name">João Silva</h1>', unsafe_allow_html=True)
 st.markdown('<p class="tag">Pedreiro • Construtor • Reforma</p>', unsafe_allow_html=True)
 
-# Stats sem divisor
+# Stats
 st.markdown('''
 <div class="stats-container">
     <div class="stat-box">
@@ -339,7 +335,7 @@ st.markdown('''
 
 st.markdown('</div>', unsafe_allow_html=True)
 
-# QR CODE TRANSPARENTE
+# QR CODE
 st.markdown('<div class="qr-section">', unsafe_allow_html=True)
 
 st.markdown('''
