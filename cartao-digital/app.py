@@ -77,7 +77,7 @@ header, #MainMenu, footer {visibility: hidden !important;}
 
 /* CONTEÚDO COM PADDING SUPERIOR GARANTIDO */
 .content-start {
-    padding-top: 120px !important; /* 170px foto - 85px + 35px de respiro */
+    padding-top: 80px !important; /* 170px foto - 85px + 35px de respiro */
 }
 
 .name {
