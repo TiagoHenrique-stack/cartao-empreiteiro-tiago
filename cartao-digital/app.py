@@ -32,12 +32,11 @@ header, #MainMenu, footer {visibility: hidden !important;}
 }
 
 .float-card {
-    background: rgba(255, 255, 255, 0.96) !important;
+    background: transparent !important;
     backdrop-filter: blur(24px) !important;
-    border-radius: 40px !important;
+   
     padding: 0 32px 36px 32px !important; /* Padding 0 no topo */
-    box-shadow: 0 40px 80px rgba(0,0,0,0.3) !important;
-    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+   
     position: relative !important;
     margin: 120px auto 0 auto !important; /* Espaço pra foto de 170px não cortar */
     text-align: center !important;
