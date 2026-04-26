@@ -275,7 +275,7 @@ st.markdown('</div>', unsafe_allow_html=True)
 # CONTEÚDO
 st.markdown('<div class="content-start">', unsafe_allow_html=True)
 
-st.markdown('<h1 class="name">João Silva</h1>', unsafe_allow_html=True)
+st.markdown('<h1 class="name">Tiago Henrique Severino</h1>', unsafe_allow_html=True)
 st.markdown('<p class="tag">Pedreiro • Construtor • Reforma</p>', unsafe_allow_html=True)
 
 # Stats
@@ -300,7 +300,7 @@ st.markdown('''
 st.markdown('<div class="btn-premium-stack">', unsafe_allow_html=True)
 
 st.markdown('''
-<a href="https://wa.me/47999999?text=Olá%20João,%20vi%20seu%20cartão%20digital%20e%20quero%20um%20orçamento" target="_blank" class="btn-premium">
+<a href="https://wa.me/47997125274?text=Olá%20João,%20vi%20seu%20cartão%20digital%20e%20quero%20um%20orçamento" target="_blank" class="btn-premium">
     <div class="btn-premium-content">
         <span class="btn-premium-icon">💬</span>
         <span class="btn-premium-text">Falar no WhatsApp</span>
