@@ -277,7 +277,7 @@ st.markdown('</div>', unsafe_allow_html=True)
 # CONTEÚDO
 st.markdown('<div class="content-start">', unsafe_allow_html=True)
 
-st.markdown('<h1 class="name">Tiago Henrique Severino</h1>', unsafe_allow_html=True)
+st.markdown('<h1 class="name">Empreiteiro</h1>', unsafe_allow_html=True)
 st.markdown('<p class="tag">Pedreiro • Construtor • Reforma</p>', unsafe_allow_html=True)
 
 # Stats
